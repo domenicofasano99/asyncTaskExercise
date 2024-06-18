@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <!-- Info Button -->
+    <Button
+        android:id="@+id/buttonInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="How to use"/>
+    <!-- Number Input Fields -->
+    <LinearLayout
+        android:id="@+id/inputLayout"
+        android:layout_below="@id/buttonInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/editTextNumber1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Number 1"
+            android:inputType="numberDecimal"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:id="@+id/editTextNumber2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Number 2"
+            android:inputType="numberDecimal"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+    <!-- Calculation Buttons -->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"/>
+
+        <Button
+            android:id="@+id/buttonSubtract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subtract"
+            android:layout_marginLeft="8dp"/>
+
+        <Button
+            android:id="@+id/buttonMultiply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Multiply"
+            android:layout_marginLeft="8dp"/>
+
+        <Button
+            android:id="@+id/buttonDivide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Divide"
+            android:layout_marginLeft="8dp"/>
+    </LinearLayout>
+
+    <!-- Calculation Result -->
+    <TextView
+        android:id="@+id/textViewCalculationResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"/>
+
+    <!-- Timer Selection and Start Button -->
+    <LinearLayout
+        android:id="@+id/timerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewCalculationResult"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <NumberPicker
+            android:id="@+id/numberPicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:value="10" />
+
+        <Button
+            android:id="@+id/buttonStartTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Timer"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textTimerResult"
+        android:layout_width="match_parent"
+        android:layout_below="@id/timerLayout"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp" />
+
+    <!-- Download Photo Button -->
+    <Button
+        android:id="@+id/buttonDownloadPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download Photo"
+        android:layout_below="@id/textTimerResult"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/textImageResult"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/buttonDownloadPhoto"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp" />
+
+    <!-- Downloaded Image -->
+    <ImageView
+        android:id="@+id/imageViewPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop" />
+</RelativeLayout>

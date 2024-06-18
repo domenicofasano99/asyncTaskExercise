@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">HW2_DomenicoFasano_721HHHINGINFOR</string>
+    <string name="info_text">This app was created by Domenico Fasano (721HHHINGINFOR) for the second homework and allows you to perform various operations,
+        some of them in asyncTask:\n\n
+\u2022 Enter two numbers and perform calculations (addition, subtraction, multiplication, division).\n
+\u2022 Start a timer for a specified number of seconds: \n
+        \t\t   the timer runs in asyncTask. \n
+\u2022 Download and display an image from a URL: \n
+        \t\t   the download runs in asyncTask and to simulate a bit of download latency there is a sleep of 3 seconds.\n\n
+In the meantime that some asyncTask is running, you can do some operation with the calculator or run another asynk task.\n
+        Tap the Back button or swipe to return to the main screen.</string>
+
+</resources>
